@@ -1,0 +1,15 @@
+$wrapper: 'body' !default;
+
+$font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+
+
+@mixin box-sizing($var) {
+  -webkit-box-sizing: $var;
+  -moz-box-sizing: $var;
+  box-sizing: $var;
+}
+@mixin transition($var) {
+  -webkit-transition: $var;
+  -o-transition: $var;
+  transition: $var;
+}
