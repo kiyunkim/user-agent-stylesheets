@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  font-size: 12px !important;
+}
+
+/* ----- login page ------ */
+#login-area .index-top-bar-links {
+  margin: 0;
+  position: relative;
+  background: #222;
+  color: #eee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.login-link {
+  color: #959eaf;
+}
+
+.login-link img {
+  display: none;
+}
+
+/* ----- login box ------ */
+.index-box {
+  padding: 0;
+  border: none;
+  position: relative;
+  height: auto;
+}
+
+.index-box > img {
+  max-width: 100px;
+  height: auto;
+}
+
+span.game-button {
+  background-color: #888;
+  display: inline-block;
+  font-size: 1rem;
+  width: 200px;
+  height: auto;
+  border: none;
+  margin: 1rem;
+  padding: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.img-icon-small {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border: none;
+}
+
+span.event-button {
+  font-size: 20pt;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background-color: #FFDADA;
+  border-color: black;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  margin: 10px 50px;
+  cursor: pointer;
+  border-style: double;
+}
+
+span.event-button:hover {
+  color: red;
+}
+
+span.game-button:hover {
+  color: blue;
+}
+
+div.old-links {
+  color: orange;
+  font-size: 10pt;
+  text-align: center;
+}
+
+div.index-top-bar-links {
+  position: absolute;
+  margin-bottom: 100px;
+  top: 0;
+  border-bottom: 2px solid grey;
+  background-color: black;
+  width: 100%;
+  left: 0;
+  padding: 5px;
+  font-size: 16pt;
+  text-align: center;
+  color: orange;
+}
+
+div.login-message-area {
+  border: 1px solid orange;
+  background-color: #ffe6cc;
+  padding: 10px 20px;
+  color: black;
+  font-size: 10pt;
+  text-align: center;
+}
+
+.login-box {
+  border: 1px solid silver;
+  padding: 10px 90px 10px 90px;
+  display: inline-block;
+  color: white;
+  margin-left: 40px;
+  background-color: black;
+}
+
+h1.title {
+  text-align: center;
+  font-size: 40pt;
+  color: white;
+}
+/*# sourceMappingURL=diamondhunt.co.css.map */
