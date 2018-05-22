@@ -1,5 +1,11 @@
 $font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 
+$color-dark: #191e27;
+$color-darker: darken($color-dark,5%);
+$color-light: #8f9eb9;
+$color-lighter: lighten($color-light, 10%);
+
+
 @mixin box-sizing($var) {
   -webkit-box-sizing: $var;
   -moz-box-sizing: $var;
@@ -10,25 +16,34 @@ $font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-
   -o-transition: $var;
   transition: $var;
 }
-
+@mixin grayscale($var) {
+  -webkit-filter: grayscale($var);
+  filter: grayscale($var);
+}
+ 
 body {
   margin: 0;
+  font-size: 14px;
   font-family: $font-family;
 }
-* {
-  font-size: 12px !important;
-}
-
-/* ----- login page ------ */
+/* ----- login top bar ------ */
 #login-area .index-top-bar-links {
   margin: 0;
+  padding: 1rem;
+  border-bottom: 1px solid lighten($color-dark, 20%);
   position: relative;
-  background: #222;
-  color: #eee;
+  background: $color-dark;
   @include box-sizing(border-box);
 }
 .login-link {
-  color: #959eaf;
+  font-size: 1rem;
+  color: $color-light;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 7px;
+  &:hover {
+    color: #eee;
+  }
   img {
     display: none;
   }
@@ -36,29 +51,63 @@ body {
 
 /* ----- login box ------ */
 .index-box {
-  padding: 0;
+  padding: 2rem 2rem 8rem;
+  max-width: 900px;
+  width: 85%;
+  height: auto;
   border: none;
+  margin: 1rem auto !important;
   position: relative;
-  height: auto;
-}
-.index-box > img {
-  max-width: 100px;
-  height: auto;
+  background: $color-dark;
+  @include box-sizing(border-box);
+  & > img {
+    display: none;
+  }
+  &::before {
+    display: block;
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: $color-lighter;
+    content: 'Diamond Hunt 2';
+  }
 }
 span.game-button {
-  background-color: #888;
+  color: $color-light;
+  font-weight: bold;
+  border: 1px solid rgba($color-light,0.5);
+  background-color: rgba($color-light,0.25);
   display: inline-block;
   font-size: 1rem;
   width: 200px;
   height: auto;
-  border: none;
   margin: 1rem;
   padding: 1rem;
   line-height: 1.5;
   cursor: pointer;
+  &:hover {
+    color: $color-lighter;
+    background-color: rgba($color-light,0.15);
+  }
 }
 
+/* ----- login panel ----- */
+#login-panels {
+  padding: 1rem;
+  @include box-sizing(border-box);
+}
 
+.login-box {
+	border: 1px solid lighten($color-dark, 20%);
+	display:inline-block;
+	padding: 10px;
+	margin-left: 0;
+	color: $color-lighter; 
+  background-color: $color-darker;
+  & > h1 {
+    color: lighten($color-light,20%);
+    margin: 0;
+  }
+}
 
 
 
@@ -98,36 +147,7 @@ span.event-button:hover
 	color:red;
 }
 
-span.game-button
-{
-}
 
-span.game-button:hover
-{
-	color:blue;
-}
-div.old-links
-{
-	color:orange;
-	font-size:10pt;
-	text-align:center;
-}
-
-
-div.index-top-bar-links
-{
-	position:absolute;
-	margin-bottom:100px;
-	top:0;
-	border-bottom:2px solid grey;
-	background-color:black;
-	width:100%;
-	left:0;
-	padding:5px;	
-	font-size:16pt;
-	text-align:center;
-	color:orange;
-}
 
 div.login-message-area
 {
@@ -141,15 +161,6 @@ div.login-message-area
 
 
 
-.login-box
-{
-	border: 1px solid silver;
-	padding:10px 90px 10px 90px;
-	display:inline-block;
-	color:white;
-	margin-left:40px;
-	background-color:black;
-}
 
 h1.title
 {
