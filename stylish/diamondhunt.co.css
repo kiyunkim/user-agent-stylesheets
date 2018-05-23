@@ -2,10 +2,13 @@ body {
   margin: 0;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  background-image: url("../images/backgrounds/background2.jpg") !important;
+  background-size: contain;
 }
 
-/* ----- login top bar ------ */
-#login-area .index-top-bar-links {
+/* ----- top bar ------ */
+#login-area .index-top-bar-links,
+table.top-links {
   margin: 0;
   padding: 1rem;
   border-bottom: 1px solid #414e65;
@@ -14,6 +17,16 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+table.top-links {
+  padding: .5rem;
+}
+
+table.top-links tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .login-link {
@@ -30,6 +43,42 @@ body {
 
 .login-link img {
   display: none;
+}
+
+table.top-links td {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 0 12px;
+  width: auto;
+}
+
+/*
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  */
+a.top-links-a,
+span.top-links,
+table.top-links td {
+  font-size: .8rem;
+  text-align: left !important;
+  text-transform: uppercase;
+  color: #8f9eb9;
+}
+
+#playtime {
+  color: #f5f5f5;
+}
+
+a.top-links-a:hover,
+span.top-links:hover {
+  color: #f5f5f5;
+}
+
+span.top-links {
+  cursor: pointer;
 }
 
 /* ----- login box ------ */
@@ -81,7 +130,7 @@ span.game-button:hover {
 
 /* ----- login panel ----- */
 #login-panels {
-  padding: 1rem;
+  padding: 1rem 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -91,14 +140,33 @@ span.game-button:hover {
   border: 1px solid #414e65;
   display: inline-block;
   padding: 10px;
+  width: 32%;
   margin-left: 0;
   color: #aeb9cd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #0f1217;
 }
 
 .login-box > h1 {
   color: #ced4e0;
-  margin: 0;
+  font-size: 1.3rem !important;
+  margin: .5rem 0 1rem;
+}
+
+.login-box table {
+  width: 100% !important;
+}
+
+/* ----- game ----- */
+div.tab-container {
+  background-image: none;
+}
+
+/* ----- hide chat ----- */
+#div-chat {
+  visibility: hidden;
 }
 
 .img-icon-small {
