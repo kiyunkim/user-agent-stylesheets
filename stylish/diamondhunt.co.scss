@@ -4,6 +4,7 @@ $color-dark: #191e27;
 $color-darker: darken($color-dark,5%);
 $color-light: #8f9eb9;
 $color-lighter: lighten($color-light, 10%);
+$color-highlight-yellow: #f0e056;
 $white: #f5f5f5;
 
 
@@ -41,6 +42,9 @@ body {
   background-image: url('../images/backgrounds/background2.jpg') !important;
   background-size: contain;
 }
+br
+{ display: none; }
+
 /* ----- top bar ------ */
 #login-area .index-top-bar-links,
 table.top-links {
@@ -55,7 +59,7 @@ table.top-links {
   padding: .5rem;
 }
 table.top-links tr{
-  @include displayflex();
+  //@include displayflex();
 }
 .login-link {
   font-size: 1rem;
@@ -71,25 +75,30 @@ table.top-links tr{
   }
 }
 table.top-links td {
-  @include flexbox-justify-content(space-evenly);
+  //@include flexbox-justify-content(space-evenly);
   padding: 0 12px;
   width: auto;
 }
-/*
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-
-  */
+table.top-links td:nth-child(2), // rules
+table.top-links td:nth-child(4), // update log
+table.top-links td:nth-child(6) { // submit a bug 
+  display: none;
+}
+table.top-links td:nth-child(3) { // profile link 
+  width: 60px;
+}
+table.top-links td:nth-child(5) a.top-links-a { // wiki
+  color: $color-highlight-yellow;
+  font-weight: bold;
+}
 a.top-links-a,
 span.top-links,
-table.top-links td {
+table.top-links td,
+#playtime {
   font-size: .8rem;
-  text-align: left !important;
   text-transform: uppercase;
   color: $color-light;
 }
-#playtime { color: $white; }
 a.top-links-a:hover,
 span.top-links:hover {
   color: $white;
@@ -164,9 +173,16 @@ span.game-button {
 }
 
 /* ----- game ----- */
+// top bar 1
+table.top-bar {
+  background: none;
+  table-layout: auto;
+}
+
 div.tab-container {
   background-image: none;
 }
+
 
 
 /* ----- hide chat ----- */
@@ -174,7 +190,11 @@ div.tab-container {
   visibility: hidden;
 }
 
-
+/* ----- images ----- */
+.image-icon-50 {
+  width: 30px;
+  height: 30px;
+}
 
 
 

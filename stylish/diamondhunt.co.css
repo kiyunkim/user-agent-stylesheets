@@ -6,6 +6,10 @@ body {
   background-size: contain;
 }
 
+br {
+  display: none;
+}
+
 /* ----- top bar ------ */
 #login-area .index-top-bar-links,
 table.top-links {
@@ -21,12 +25,6 @@ table.top-links {
 
 table.top-links {
   padding: .5rem;
-}
-
-table.top-links tr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .login-link {
@@ -46,30 +44,32 @@ table.top-links tr {
 }
 
 table.top-links td {
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
   padding: 0 12px;
   width: auto;
 }
 
-/*
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-
-  */
-a.top-links-a,
-span.top-links,
-table.top-links td {
-  font-size: .8rem;
-  text-align: left !important;
-  text-transform: uppercase;
-  color: #8f9eb9;
+table.top-links td:nth-child(2),
+table.top-links td:nth-child(4),
+table.top-links td:nth-child(6) {
+  display: none;
 }
 
+table.top-links td:nth-child(3) {
+  width: 60px;
+}
+
+table.top-links td:nth-child(5) a.top-links-a {
+  color: #f0e056;
+  font-weight: bold;
+}
+
+a.top-links-a,
+span.top-links,
+table.top-links td,
 #playtime {
-  color: #f5f5f5;
+  font-size: .8rem;
+  text-transform: uppercase;
+  color: #8f9eb9;
 }
 
 a.top-links-a:hover,
@@ -160,6 +160,11 @@ span.game-button:hover {
 }
 
 /* ----- game ----- */
+table.top-bar {
+  background: none;
+  table-layout: auto;
+}
+
 div.tab-container {
   background-image: none;
 }
@@ -167,6 +172,12 @@ div.tab-container {
 /* ----- hide chat ----- */
 #div-chat {
   visibility: hidden;
+}
+
+/* ----- images ----- */
+.image-icon-50 {
+  width: 30px;
+  height: 30px;
 }
 
 .img-icon-small {
