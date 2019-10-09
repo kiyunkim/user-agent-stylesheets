@@ -1,0 +1,70 @@
+/* observe the sky button */
+.scheme_sleek #observeButton {
+  height: auto !important;
+  margin-bottom: 10px;
+}
+.scheme_sleek #observeBtn {
+  background: #00b7ff !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px #ffff8eb3 !important;
+  border-radius: 5px !important;
+}
+/* tooltip */
+.scheme_sleek #tooltip {
+  top: 150px !important; 
+}
+
+/* general */
+html {
+  font-size: 13px;
+}
+body {
+  font-size: 1rem;
+}
+/* header */
+.scheme_sleek #topBar {
+  font-size: 1rem;
+  padding-top: 5px;
+  height: 23px;
+}
+.scheme_sleek #topBar > div:first-child {
+  padding-left: 8px !important;
+}
+.scheme_sleek #headerLinks {
+  top: 5px !important;
+  font-size: 1rem;
+}
+/* footer links */
+.scheme_sleek #footerLinks {
+  padding: 10px;
+  border-radius: 5px;
+  right: 0;
+  bottom: 0;
+  background: #100e0cc4;
+}
+.scheme_sleek #footerLinks a {
+  color: #9a9a9a;
+}
+
+/* left col */
+.scheme_sleek #leftColumn {
+  padding: 0 5px;
+}
+/* tabs */
+.scheme_sleek .tabsContainer {
+  z-index: 2;
+  background: rgba(19, 15, 12, .77);
+  padding: 5px 15px;
+  position: fixed;
+  top: 35px;
+  
+}
+.scheme_sleek .tabInner {
+  padding: 35px 10px 0;
+  margin-top: 15px;
+}
+.scheme_sleek .bldGroupContainer {
+  margin-top: 0;
+}
