@@ -1,0 +1,138 @@
+.removed {
+  background: #edb2b2;
+  border: 2px solid #c00;
+}
+.deleted {
+  background: #a8c4ef;
+  border: 2px solid #00007d;
+}
+
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  background: #fff;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 1.5;
+  background: inherit;
+  color: #222;
+}
+a:link,
+.subreddit-title {
+  color: #0057ab;
+  text-decoration: underline;
+}
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+header {
+  width: 900px;
+  background: transparent;
+  padding: 0;
+}
+header #header a,
+header #header h1 a {
+  color: #222;
+  transition: none;
+}
+header #header h1 a:hover {
+  color: #840c09;
+  text-decoration: underline;
+}
+header #status #status-text {
+  color: inherit;
+}
+.main {
+  max-width: 900px;
+  margin: 1.5rem 0;
+  color: inherit;
+}
+.author {
+  color: #0057ab;
+  font-weight: bold;
+}
+
+.thread {
+  padding: 1rem 1rem .4rem;
+}
+
+.thread .thread-score-box {
+  margin: 0;
+  width: auto;
+  padding: 0 10px;
+}
+.thread .thumbnail {
+  width: 50px;
+  margin-top: 0;
+  background-position-x: -10px;
+}
+
+.thread .thread-content {
+  padding: 0 25px 5px 10px;
+}
+.thread .thread-title {
+  color: #0064ab;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.thread .domain {
+  color: inherit;
+  opacity: 0.6;
+}
+.thread .thread-info {
+  color: inherit;
+  opacity: 0.6;
+}
+.thread .thread-selftext {
+  color: inherit;
+  border: 0;
+  padding: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.thread .thread-selftext p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+.thread .total-comments .grey-link {
+  color: #222;
+  text-decoration: none;
+}
+
+.comment {
+  color: inherit;
+  font-size: 1rem;
+  padding: 10px 20px 0;
+  border: 1px solid #aaa;
+}
+.comment-even {
+  background: #eee;
+}
+.comment-odd {
+  background: #ddd;
+}
+.comment .comment-score {
+  color: inherit;
+}
+.comment .comment-body p {
+  line-height: 1.5;
+  margin: .5rem 0;
+}
+.comment > div:last-child {
+  margin-left: 1rem;
+}
+.comment .comment-links {
+  margin-bottom: .8rem;
+  line-height: 1;
+}
