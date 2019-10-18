@@ -114,6 +114,9 @@ body {
   flex: 0 1 60%;
   max-width: 600px;
 }
+.content .thing {
+  width: 100%;
+}
 
 /* --- sidebar --- */
 .side {
